@@ -1,0 +1,1 @@
+sls config credentials --provider aws --key AKIAX3DNHQBYD6KHT2UP --secret XklsFHpAvx5ZuJjmI3Aqy6n5y++N0FLAocz80PZdpAvx5ZuJjmI3Aqy6n5y++N0FLAocz80PZd

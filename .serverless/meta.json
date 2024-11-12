@@ -1,0 +1,112 @@
+{
+  "D:\\test awplify\\test-awplify": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "D:\\test awplify\\test-awplify",
+    "serviceConfigFileName": "serverless.yaml",
+    "service": {
+      "org": "dtalandier",
+      "app": "awplify-test",
+      "service": "test-awplify",
+      "plugins": [
+        "serverless-plugin-optimize",
+        "serverless-offline"
+      ],
+      "provider": {
+        "name": "aws",
+        "Runtime": "nodejs20.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "main": {
+          "handler": "src/lambda.handler",
+          "events": [
+            {
+              "http": {
+                "method": "ANY",
+                "path": "/"
+              }
+            },
+            {
+              "http": {
+                "method": "ANY",
+                "path": "{proxy+}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\r\norg: dtalandier\r\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\r\napp: awplify-test\r\nservice: test-awplify\r\n\r\nplugins:\r\n  - serverless-plugin-optimize\r\n  - serverless-offline\r\n\r\nprovider:\r\n  name: aws\r\n  Runtime: nodejs20.x\r\n\r\nfunctions:\r\n  main:\r\n    handler: src/lambda.handler\r\n    events:\r\n      - http:\r\n          method: ANY\r\n          path: /\r\n      - http:\r\n          method: ANY\r\n          path: '{proxy+}'",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless plugin \"serverless-plugin-optimize\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-plugin-optimize\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:953:2671)\n    at async PluginManager.loadAllPlugins (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:953:1293)\n    at async Serverless.init (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:960:9930)\n    at async runFramework (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:983:1262)\n    at async route (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:1011:14772)\n    at async Object.run2 [as run] (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:1011:15173)\n    at async run3 (file:///C:/Users/dimit/.serverless/releases/4.4.7/package/dist/sf-core.js:1011:16435)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "c4c17614e415738d259915e183564e9f",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "56094d69-1033-4114-8655-d30ef838e346",
+    "orgName": "dtalandier",
+    "userId": "ZPQJjDtgPjH0lkQtDM",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": false,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "Sb3MB4JBGXBBF6wl1c",
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "dtalandier",
+    "subscription": null,
+    "userEmail": "dimitri.talandier@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "539247476848",
+    "projectType": "traditional",
+    "versionSf": "4.4.7",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  },
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [
+      "login"
+    ],
+    "options": {},
+    "error": null,
+    "machineId": "c4c17614e415738d259915e183564e9f",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

@@ -1,0 +1,27 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: dtalandier
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: awplify-test
+service: test-awplify
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  # Default timeout for functions (default: 6 seconds)
+  # Note: API Gateway has a maximum timeout of 30 seconds
+  timeout: 10
+  region: eu-west-3
+
+functions:
+  main:
+    handler: src/lambda.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'
